@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Credit Card Application API
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /credit-card-applications:
+    post:
+      summary: Submit a credit card application
+      operationId: SubmitApplication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreditCardApplication'
+      responses:
+        '201':
+          description: Application successfully submitted and acknowledgment received
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Application successfully submitted and acknowledgment received
+        '400':
+          description: Application not submitted, error message displayed requesting for missing or correct information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Application not submitted, error message displayed requesting for missing or correct information
+components:
+  schemas:
+    CreditCardApplication:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        phoneNumber:
+          type: string
+        address:
+          type: string
+        creditScore:
+          type: integer
+      required:
+        - firstName
+        - lastName
+        - email
+        - phoneNumber
+        - address
+        - creditScore

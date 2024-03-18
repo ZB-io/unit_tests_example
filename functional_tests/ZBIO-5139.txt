@@ -1,0 +1,72 @@
+FUNCTIONAL TEST CASE:
+Functional Test Cases:
+
+1. Credit Card Application:
+   - Test Case 1:
+     - Input: Valid identification, income details, and contact information.
+     - Action: Submit credit card application.
+     - Expected Output: Application successfully submitted and acknowledgment received.
+   - Test Case 2:
+     - Input: Incomplete or invalid information.
+     - Action: Submit credit card application.
+     - Expected Output: Application not submitted, error message displayed requesting for missing or correct information.
+
+2. Waiving Off Charges:
+   - Test Case 3:
+     - Input: Customer requests for waiving off unexpected charges.
+     - Action: Bank reviews customer's history and the request.
+     - Expected Output: If eligible, charges are waived off and updated in the account.
+
+3. Redeeming Points:
+   - Test Case 4:
+     - Input: Customer requests to redeem accumulated reward points.
+     - Action: Bank processes the request and deducts the corresponding points from the account.
+     - Expected Output: Rewards are successfully redeemed and updated points balance is reflected in the account.
+
+4. Credit Limit Extension:
+   - Test Case 5:
+     - Input: Bank evaluates customer's creditworthiness, payment history, and income stability.
+     - Action: Bank decides to increase the credit limit.
+     - Expected Output: Credit limit is increased and updated in the account.
+
+5. Credit Limit Reduction:
+   - Test Case 6:
+     - Input: Bank evaluates changes in customer's financial situation or risk profile.
+     - Action: Bank decides to reduce the credit limit.
+     - Expected Output: Credit limit is reduced and updated in the account.
+
+6. Promotional Balance Transfers:
+   - Test Case 7:
+     - Input: Customer requests for balance transfer under promotional offer.
+     - Action: Bank processes the request and transfers the balance.
+     - Expected Output: Balance is successfully transferred under the promotional offer.
+
+Non-Functional Test Cases:
+
+1. Test Case 8:
+   - Check the system's response time when a user submits a credit card application.
+   - Expected Output: The system should respond within an acceptable time frame.
+
+2. Test Case 9:
+   - Verify the system's ability to handle multiple credit card applications simultaneously.
+   - Expected Output: The system should process multiple applications without any delay or error.
+
+3. Test Case 10:
+   - Test system's behavior when connection is lost during the credit card application process.
+   - Expected Output: The system should save the entered data and allow the user to continue from where they left off when the connection is restored.
+
+4. Test Case 11:
+   - Check the security measures in place for handling sensitive customer information.
+   - Expected Output: The system should use secure protocols for data transmission and storage.
+
+5. Test Case 12:
+   - Verify the system's behavior when maximum limit for unsuccessful credit card application attempts is reached.
+   - Expected Output: The system should lock the user's account and notify the user after a certain number of unsuccessful attempts.
+
+6. Test Case 13:
+   - Verify the correctness and timeliness of notifications sent to users for different actions (like fee waiver, points redemption, credit limit update, etc.)
+   - Expected Output: Notifications should be sent promptly and contain accurate information.
+
+7. Test Case 14:
+   - Verify data integrity during balance transfer under promotional offer.
+   - Expected Output: The transferred balance should be accurate and reflect correctly in both sender's and recipient's accounts.
