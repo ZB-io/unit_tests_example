@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: HSBC Developer Portal API
+  version: 1.0.0
+servers:
+  - url: https://hsbc.com/api
+paths:
+  /api-endpoint:
+    get:
+      summary: Get data from the valid endpoint
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    description: Expected data
+        '404':
+          description: Invalid endpoint
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message

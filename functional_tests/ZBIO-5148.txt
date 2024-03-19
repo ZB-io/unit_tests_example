@@ -1,0 +1,50 @@
+Functional Test Cases:
+
+1. Test Case: Verify the successful API call using the HSBC Developer Portal.
+   - Input: Valid API endpoint from HSBC Developer Portal
+   - Expected Output: API call is successful and returns the expected data
+   - Edge Case: API endpoint does not exist
+
+2. Test Case: Verify the API call with invalid API endpoint from HSBC Developer Portal.
+   - Input: Invalid API endpoint from HSBC Developer Portal
+   - Expected Output: API call fails and returns an error message
+
+3. Test Case: Verify the successful API call for the "omni-collect-simulation-api".
+   - Input: Valid API endpoint for "omni-collect-simulation-api"
+   - Expected Output: API call is successful and returns the expected data
+   - Edge Case: API endpoint does not exist
+
+4. Test Case: Verify the successful API call for the "sandbox-management-api".
+   - Input: Valid API endpoint for "sandbox-management-api"
+   - Expected Output: API call is successful and returns the expected data
+   - Edge Case: API endpoint does not exist
+
+5. Test Case: Verify the functionality of API virtualisation with Mockito.
+   - Input: API endpoint to be virtualised using Mockito
+   - Expected Output: Successful virtualisation and the virtualised API returns the expected data
+
+6. Test Case: Verify that test cases can be generated from requirements and source code for TDD.
+   - Input: Requirements and source code
+   - Expected Output: Test cases are successfully generated
+
+Non-Functional Test Cases:
+
+1. Test Case: Verify the performance of the APIs under high load.
+   - Input: High number of API calls in a short time frame
+   - Expected Output: APIs are able to handle the load without significant performance degradation
+
+2. Test Case: Verify the security of the APIs using penetration testing tools.
+   - Input: API endpoints
+   - Expected Output: No security vulnerabilities are found
+
+3. Test Case: Verify the resilience of the APIs by simulating network failures.
+   - Input: API endpoints
+   - Expected Output: APIs are able to recover from network failures without data loss
+
+4. Test Case: Verify the usability of the APIs by checking the clarity of the API documentation.
+   - Input: API documentation
+   - Expected Output: API documentation is clear and easy to understand
+
+5. Test Case: Verify the maintainability of the APIs by checking the quality of the source code.
+   - Input: Source code of the APIs
+   - Expected Output: Source code is well-structured, well-commented, and follows best practices for coding standards
