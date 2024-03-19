@@ -1,0 +1,69 @@
+FUNCTIONAL TEST CASE:
+Functional Test Cases:
+
+1. Credit Card Application:
+   - Test Case 1:
+     - Input: Valid identification, income details, and contact information.
+     - Action: Submit credit card application.
+     - Expected Output: Application successfully submitted and acknowledgment received.
+   - Test Case 2:
+     - Input: Incomplete or invalid information.
+     - Action: Submit credit card application.
+     - Expected Output: Application not submitted, error message displayed requesting for missing or correct information.
+
+2. Waiving Off Charges:
+   - Test Case 3:
+     - Input: Customer requests for waiving off unexpected charges.
+     - Action: Bank reviews customer's history and the request.
+     - Expected Output: If eligible, charges are waived off and updated in the customer's account.
+
+3. Redeeming Points:
+   - Test Case 4:
+     - Input: Customer chooses to redeem points for benefits.
+     - Action: Points are redeemed and benefits are applied.
+     - Expected Output: Points balance updated and confirmation of benefit application received.
+
+4. Credit Limit Extension:
+   - Test Case 5:
+     - Input: Customer's creditworthiness, payment history, and income stability.
+     - Action: Bank decides to extend the credit limit.
+     - Expected Output: Credit limit extended and customer is notified.
+
+5. Credit Limit Reduction:
+   - Test Case 6:
+     - Input: Changes in customer's financial situation or risk profile.
+     - Action: Bank decides to reduce the credit limit.
+     - Expected Output: Credit limit reduced and customer is notified.
+
+6. Promotional Balance Transfers:
+   - Test Case 7:
+     - Input: Customer chooses to transfer balance from high-interest credit card.
+     - Action: Balance transferred under promotional offer.
+     - Expected Output: Balance successfully transferred and customer is notified.
+
+Non-Functional Test Cases:
+
+1. Performance:
+   - Test Case 8:
+     - Action: Multiple users apply for a credit card simultaneously.
+     - Expected Output: System handles the load without performance degradation.
+
+2. Security:
+   - Test Case 9:
+     - Action: Unauthorized attempt to access customer data.
+     - Expected Output: Attempt is blocked and logged.
+
+3. Usability:
+   - Test Case 10:
+     - Action: Customer tries to navigate through the credit card application process.
+     - Expected Output: Customer is able to easily understand and navigate through the process.
+
+4. Compatibility:
+   - Test Case 11:
+     - Action: Access the credit card application process on various devices and browsers.
+     - Expected Output: Application process works seamlessly across all tested devices and browsers.
+
+5. Disaster Recovery:
+    - Test Case 12:
+      - Action: Simulate a system failure during the credit card application process.
+      - Expected Output: System is able to recover without data loss and minimal downtime.
