@@ -1,0 +1,100 @@
+openapi: 3.0.0
+info:
+  title: Credit Card Services API
+  version: 1.0.0
+paths:
+  /apply-credit-card:
+    post:
+      summary: Apply for a credit card
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                identification:
+                  type: string
+                incomeDetails:
+                  type: string
+                contactInformation:
+                  type: string
+            required:
+              - identification
+              - incomeDetails
+              - contactInformation 
+      responses:
+        '200':
+          description: Application successfully submitted
+        '400':
+          description: Appropriate error message displayed
+  
+  /get-application-confirmation:
+    get:
+      summary: Confirm application
+      responses:
+        '200':
+          description: Application submitted successfully
+  
+  /report-fee:
+    post:
+      summary: Report unexpected fee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Fee report successfully submitted
+        '409':
+          description: Duplicate fee report error
+
+  /redeem-rewards:
+    post:
+      summary: Redeem rewards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Reward successfully redeemed
+        '400':
+          description: Insufficient points error message
+
+  /increase-limit:
+    post:
+      summary: Request for credit limit increase
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+
+  /decrease-limit:
+    post:
+      summary: Request for credit limit decrease
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+
+  /balance-transfer:
+    post:
+      summary: Request for balance transfer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Balance transfer successful
