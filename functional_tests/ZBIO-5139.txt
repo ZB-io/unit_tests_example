@@ -1,0 +1,69 @@
+FUNCTIONAL TEST CASES:
+
+1. Credit Card Application:
+   - Test Case 1:
+     - Input: Valid identification, income details, and contact information.
+     - Action: User submits a new credit card application.
+     - Expected Output: Application is submitted successfully and a confirmation message is displayed.
+     - Edge Case: If any required field is left blank or contains invalid information, an error message should be displayed.
+
+2. Waiving Off Charges:
+   - Test Case 2:
+     - Input: Customer reports an unexpected fee.
+     - Action: Bank reviews the customer's history and decides whether to waive off the charges.
+     - Expected Output: If the bank decides to waive the charges, the updated balance is displayed.
+     - Edge Case: If the customer has a history of frequently reporting fees, the bank may decide not to waive the charges.
+
+3. Redeeming Points:
+   - Test Case 3:
+     - Input: Customer chooses to redeem points for a specific benefit.
+     - Action: Points are deducted from the customer's account and the selected benefit is provided.
+     - Expected Output: The new points balance and confirmation of the benefit are displayed.
+     - Edge Case: If the customer doesn't have enough points for the selected benefit, an error message should be displayed.
+
+4. Credit Limit Extension:
+   - Test Case 4:
+     - Input: Bank decides to increase the customer's credit limit.
+     - Action: The new credit limit is applied to the customer's account.
+     - Expected Output: The new credit limit is displayed and a notification is sent to the customer.
+     - Edge Case: If the customer has a poor credit history, the bank may decide not to increase the credit limit.
+
+5. Credit Limit Reduction:
+   - Test Case 5:
+     - Input: Bank decides to decrease the customer's credit limit.
+     - Action: The new credit limit is applied to the customer's account.
+     - Expected Output: The new credit limit is displayed and a notification is sent to the customer.
+     - Edge Case: The bank cannot decrease the credit limit below the customer's current balance.
+
+6. Promotional Balance Transfers:
+   - Test Case 6:
+     - Input: Customer requests to transfer a balance from another credit card.
+     - Action: The bank applies the promotional offer to the balance transfer.
+     - Expected Output: The new balance is displayed and a confirmation message is sent to the customer.
+     - Edge Case: If the customer tries to transfer a balance that exceeds their credit limit, an error message should be displayed.
+
+NON-FUNCTIONAL TEST CASES:
+
+1. Usability:
+   - Test Case 7: The user interface should be simple and easy to navigate. All important features should be easily accessible.
+
+2. Performance:
+   - Test Case 8: The system should respond quickly to user actions. The response time should be within acceptable limits.
+
+3. Security:
+   - Test Case 9: The system should use secure protocols to protect user data. All sensitive information should be encrypted.
+
+4. Compatibility:
+   - Test Case 10: The system should be compatible with various operating systems and browsers. It should also work well on both desktop and mobile devices.
+
+5. Scalability:
+   - Test Case 11: The system should be able to handle a large number of users and transactions without performance degradation.
+
+6. Availability:
+   - Test Case 12: The system should be available 24/7. There should be minimal downtime.
+
+7. Reliability:
+   - Test Case 13: The system should perform consistently under normal conditions. It should produce correct and consistent results.
+
+8. Maintainability:
+   - Test Case 14: The system should be easy to maintain and modify. Changes should be easy to implement without affecting the overall system performance.
