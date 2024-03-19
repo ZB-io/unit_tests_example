@@ -1,0 +1,75 @@
+FUNCTIONAL TEST CASES:
+
+1. Credit Card Application:
+   - Test Case 1:
+     - Input: Valid identification, income details, and contact information.
+     - Action: User submits a new credit card application.
+     - Expected Output: Application is submitted successfully and a confirmation message is displayed.
+     - Edge Case: If any required field is left blank or contains invalid information, an error message should be displayed.
+
+2. Waiving Off Charges:
+   - Test Case 2:
+     - Input: User reports an unexpected fee on their credit card statement.
+     - Action: The bank reviews the user's history and decides whether to waive off the charges.
+     - Expected Output: If approved, the charges are waived off and an updated statement is displayed to the user.
+     - Edge Case: If the user's history does not justify waiving off the charges, the request is denied and an appropriate message is displayed.
+
+3. Redeeming Points:
+   - Test Case 3:
+     - Input: User chooses to redeem reward points for a specific benefit.
+     - Action: The system processes the user's request and deducts the corresponding number of points from their account.
+     - Expected Output: The requested benefit is provided to the user and their updated points balance is displayed.
+     - Edge Case: If the user does not have enough points for the chosen benefit, the request is denied and an error message is displayed.
+
+4. Credit Limit Extension:
+   - Test Case 4:
+     - Input: The bank evaluates a user's creditworthiness, payment history, and income stability.
+     - Action: The bank decides to increase the user's credit limit.
+     - Expected Output: The user's credit limit is successfully increased and a confirmation message is displayed.
+     - Edge Case: If the user's financial stability does not justify a credit limit increase, the request is denied and an appropriate message is displayed.
+
+5. Credit Limit Reduction:
+   - Test Case 5:
+     - Input: The bank evaluates a user's financial situation or risk profile.
+     - Action: The bank decides to reduce the user's credit limit.
+     - Expected Output: The user's credit limit is successfully reduced and a confirmation message is displayed.
+     - Edge Case: If the user's financial stability does not justify a credit limit reduction, the request is denied and an appropriate message is displayed.
+
+6. Promotional Balance Transfers:
+   - Test Case 6:
+     - Input: User chooses to participate in a promotional balance transfer.
+     - Action: The system processes the user's request and applies the promotional offer to their account.
+     - Expected Output: The balance transfer is completed successfully and an updated statement is displayed to the user.
+     - Edge Case: If the user is not eligible for the promotional offer, the request is denied and an error message is displayed.
+
+NON-FUNCTIONAL TEST CASES:
+
+1. Usability Test:
+   - Test Case 7:
+     - Action: User attempts to navigate through the website and complete various tasks.
+     - Expected Output: The website's interface is user-friendly and intuitive to use.
+
+2. Performance Test:
+   - Test Case 8:
+     - Action: User attempts to access various features of the website during peak usage times.
+     - Expected Output: The website loads quickly and performs smoothly without any lag or crashes.
+
+3. Security Test:
+   - Test Case 9:
+     - Action: User enters sensitive information into the website.
+     - Expected Output: The website uses secure protocols to protect the user's information from unauthorized access.
+
+4. Compatibility Test:
+   - Test Case 10:
+     - Action: User attempts to access the website from various devices and browsers.
+     - Expected Output: The website is compatible with all major devices and browsers and maintains its functionality and appearance.
+
+5. Reliability Test:
+   - Test Case 11:
+     - Action: User attempts to use the website over a long period of time.
+     - Expected Output: The website remains reliable and consistent in its performance and functionality.
+
+6. Scalability Test:
+   - Test Case 12:
+     - Action: The website is subjected to an increasing number of users or requests.
+     - Expected Output: The website is able to handle the increased load without any degradation in performance or functionality.
