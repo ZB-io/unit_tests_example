@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: Credit Card Application API
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /credit-card-application:
+    post:
+      summary: Submit a new credit card application
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                identification:
+                  type: string
+                incomeDetails:
+                  type: string
+                contactInformation:
+                  type: string
+      responses:
+        '200':
+          description: Application is submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: 'Application is submitted successfully'
+        '400':
+          description: Invalid information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: 'Error: Invalid information'
+security:
+  - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY

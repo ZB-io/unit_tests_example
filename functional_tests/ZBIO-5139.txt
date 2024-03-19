@@ -1,0 +1,75 @@
+FUNCTIONAL TEST CASES:
+
+1. Credit Card Application:
+   - Test Case 1:
+     - Input: Valid identification, income details, and contact information.
+     - Action: User submits a new credit card application.
+     - Expected Output: Application is submitted successfully and a confirmation message is displayed.
+     - Edge Case: If any required field is left blank or contains invalid information, an error message should be displayed.
+
+2. Waiving Off Charges:
+   - Test Case 2:
+     - Input: Customer reports an unexpected fee.
+     - Action: Bank reviews the customer's history and decides whether to waive off the charge.
+     - Expected Output: If the bank decides to waive the charge, the fee is removed from the customer's account and a confirmation message is displayed.
+     - Edge Case: If the charge is legitimate, an error message should be displayed.
+
+3. Redeeming Points:
+   - Test Case 3:
+     - Input: Customer chooses a reward to redeem their points for.
+     - Action: Points are deducted from the customer's account and the chosen reward is provided.
+     - Expected Output: The reward is successfully claimed and a confirmation message is displayed.
+     - Edge Case: If the customer does not have enough points to redeem the chosen reward, an error message should be displayed.
+
+4. Credit Limit Extension:
+   - Test Case 4:
+     - Input: Bank decides to increase the customer's credit limit based on their creditworthiness, payment history, and income stability.
+     - Action: The customer's credit limit is increased.
+     - Expected Output: The new credit limit is displayed and a confirmation message is sent to the customer.
+     - Edge Case: If the customer's creditworthiness, payment history, or income stability do not meet the bank's standards, an error message should be displayed.
+
+5. Credit Limit Reduction:
+   - Test Case 5:
+     - Input: Bank decides to decrease the customer's credit limit due to changes in their financial situation or risk profile.
+     - Action: The customer's credit limit is decreased.
+     - Expected Output: The new credit limit is displayed and a confirmation message is sent to the customer.
+     - Edge Case: If the new credit limit would be lower than the customer's current balance, an error message should be displayed.
+
+6. Promotional Balance Transfers:
+   - Test Case 6:
+     - Input: Customer initiates a balance transfer.
+     - Action: The balance is transferred from the customer's other credit card to their current credit card.
+     - Expected Output: The new balance is displayed and a confirmation message is sent to the customer.
+     - Edge Case: If the customer does not have enough available credit to transfer the full balance, an error message should be displayed.
+
+NON-FUNCTIONAL TEST CASES:
+
+1. Performance:
+   - Test Case 7:
+     - Input: Multiple users submit credit card applications at the same time.
+     - Action: The system processes all applications.
+     - Expected Output: All applications are processed within an acceptable timeframe.
+
+2. Security:
+   - Test Case 8:
+     - Input: User enters personal and financial information.
+     - Action: The system stores the information.
+     - Expected Output: The information is stored securely and cannot be accessed without authorization.
+
+3. Usability:
+   - Test Case 9:
+     - Input: User navigates through the website.
+     - Action: The user interacts with various elements on the website.
+     - Expected Output: All elements are easy to understand and use.
+
+4. Reliability:
+   - Test Case 10:
+     - Input: User performs various actions on the website.
+     - Action: The system performs the requested actions.
+     - Expected Output: All actions are performed correctly and the website does not crash or display any errors.
+
+5. Compatibility:
+   - Test Case 11:
+     - Input: User accesses the website on various devices and browsers.
+     - Action: The website is displayed.
+     - Expected Output: The website is displayed correctly on all tested devices and browsers.
