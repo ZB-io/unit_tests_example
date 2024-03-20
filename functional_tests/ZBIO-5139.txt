@@ -1,0 +1,75 @@
+Functional Test Cases:
+
+1. Credit Card Application:
+
+- Test Case 1:
+    - Input: Customer provides accurate identification, income details, and contact information.
+    - Expected Output: Customer receives a message of successful credit card application.
+    - Edge Case: Test if a customer enters invalid or missing information, the system should retaliate with an appropriate response.
+
+2. Waiving Off Charges:
+
+- Test Case 2:
+    - Input: Customer seeks waiving off of an unexpected fee.
+    - Expected Output: Based on the customer history review, the bank decides to waive off the charges as a one-time courtesy.
+    - Edge Case: Test if the bank refuses to waive off charges based on customer's history.
+
+3. Redeeming Points:
+
+- Test Case 3:
+    - Input: Customer attempts to redeem points.
+    - Expected Output: System verifies if the customer has sufficient points and action completes successfully. If not, an error message is displayed.
+    - Edge Case: If the points to be redeemed exceed the available points, the system should display an appropriate message.
+
+4. Credit Limit Extension:
+
+- Test Case 4:
+    - Input: Based on customer’s creditworthiness, payment history and income stability, the bank decides to increase their credit limit.
+    - Expected Output: System displays notification of successful credit limit extension.
+    - Edge Case: Test if the system rightfully denies credit limit extension in case the customer does not meet criteria.
+
+5. Credit Limit Reduction:
+
+- Test Case 5:
+    - Input: Owing to changes in the customer's financial situation or risk profile, the bank decides to reduce the credit limit.
+    - Expected Output: System displays notification of successful credit limit reduction.
+    - Edge Case: System should deny credit limit reduction if it endangers chances of debt recovery.
+
+6. Promotional Balance Transfers:
+
+- Test Case 6:
+    - Input: Bank provides an offer for balance transfer to existing cardholders.
+    - Expected Output: High-interest balances from other cards are transferred to the new card under the promotional offer.
+    - Edge Case: Test for system response if the customer tries to transfer a balance exceeding their credit limit.
+
+Non-Functional Test Cases:
+
+1. Performance Testing:
+
+- Test Case 7: 
+    - Test system performance under load. Input: Increase the number of users or card applications to test system performance.
+    
+2. Availability Testing:
+
+- Test Case 8: 
+    - The system should remain functional 24/7. Test for system responses when downtime happens.
+
+3. Security Testing:
+
+- Test Case 9: 
+    - All connections must use secure protocols and all sensitive data must be encrypted. 
+
+4. Compatibility Testing:
+
+- Test Case 10: 
+    - Must work on all specified browsers and devices. 
+
+5. Usability Testing:
+
+- Test Case 11: 
+    - Application should be user-friendly with clear instructions. Test navigation, options layout, and readability.
+
+6. Disaster Recovery Testing:
+
+- Test Case 12:
+    - The system should have the ability to recover data in case of a disaster. Destroy a database and attempt to restore it using the system's recovery methods.
