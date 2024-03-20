@@ -1,0 +1,114 @@
+openapi: 3.0.0
+info:
+  title: Bank API
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /apply/credit-card:
+    post:
+      summary: Apply for credit card
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreditCardApplication'
+      responses:
+        '200':
+          description: Application successful
+        '400':
+          description: Invalid or missing information
+  /customer-history/review-charges:
+    get:
+      summary: Review charges
+      responses:
+        '200':
+          description: Charges reviewed
+        '403':
+          description: Request denied
+  /customer-points/redeem:
+    post:
+      summary: Redeem points
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PointsRedeem'
+      responses:
+        '200':
+          description: Action successful
+        '400':
+          description: Insufficient points
+  /credit-limit/increase:
+    post:
+      summary: Increase credit limit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreditLimitChange'
+      responses:
+        '200':
+          description: Limit extended
+        '403':
+          description: Limit extension denied
+  /credit-limit/reduce:
+    post:
+      summary: Reduce credit limit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreditLimitChange'
+      responses:
+        '200':
+          description: Limit reduced
+        '403':
+          description: Reduction denies debt recovery
+  /cardholders/transfer:
+    post:
+      summary: Promotional balance transfers
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BalanceTransfer'
+      responses:
+        '200':
+          description: Transfer successful
+        '400':
+          description: Transfer exceeds credit limit
+# The additional scenarios regarding performance, security, usability testing, disaster recovery and compatibility are typically not handled by the API itself; therefore, those scenarios are not included here.
+components:
+  schemas:
+    CreditCardApplication:
+      type: object
+      properties:
+        identification:
+          type: string
+        incomeDetails:
+          type: string
+        contactInformation:
+          type: string
+    PointsRedeem:
+      type: object
+      properties:
+        noOfPoints:
+          type: integer
+    CreditLimitChange:
+      type: object
+      properties:
+        limitChange:
+          type: number
+    BalanceTransfer:
+      type: object
+      properties:
+        amount:
+          type: number
+    UserCredentials:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
