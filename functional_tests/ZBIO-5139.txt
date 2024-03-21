@@ -1,0 +1,74 @@
+Functional Test Cases:
+
+1. Credit Card Application:
+   - Test Case 1:
+     - Input: Identification, income details, and contact information.
+     - Action: User applies for a new credit card.
+     - Expected Output: The system should validate the input data and successfully submit the credit card application.
+
+   - Test Case 2:
+     - Input: Incomplete or incorrect information.
+     - Action: User applies for a new credit card.
+     - Expected Output: The system should validate the input data and reject the credit card application displaying appropriate error messages.
+
+2. Waiving Off Charges:
+   - Test Case 3:
+     - Input: Customer encounters an unexpected fee on their credit card statement.
+     - Action: The bank reviews the customer's history.
+     - Expected Output: Based on the history, the bank decides to waive off the charges one-time, and the updated balance should reflect on the credit card statement.
+
+3. Redeeming Points:
+   - Test Case 4:
+     - Input: There are accumulated reward points in the user account.
+     - Action: User redeems points for various benefits.
+     - Expected Output: The system should subtract the redeemed points from the account and provide the user with the selected benefits.
+
+4. Credit Limit Extension:
+   - Test Case 5:
+     - Input: User has been using their credit card responsibly.
+     - Action: The bank decides to increase their credit limit.
+     - Expected Output: The system should update the user's credit limit and notify the user.
+
+5. Credit Limit Reduction:
+   - Test Case 6:
+     - Input: There are changes in the user's financial situation or risk profile.
+     - Action: The bank decides to reduce the credit limit on their credit card.
+     - Expected Output: The system should update the credit limit and notify the user.
+
+6. Promotional Balance Transfers:
+   - Test Case 7:
+     - Input: Promotional offer for balance transfer.
+     - Action: User transfers high-interest balances from other credit cards.
+     - Expected Output: The system should successfully accept the transfer under promotional offer and update balances of involved credit cards.
+
+Non-functional Test Cases:
+
+1. Usability:
+   - Test Case 8:
+     - Action: User tries to use the online credit card applications.
+     - Expected Output: The UI should be user-friendly and provide clear instructions to complete all actions.
+
+2. Performance:
+   - Test Case 9:
+     - Action: Multiple users apply for credit cards concurrently.
+     - Expected Output: The system should be able to handle multicore requests without any performance degradation.
+
+3. Security:
+   - Test Case 10:
+     - Action: User submits personally identifiable information (PII) and financial data.
+     - Expected Output: Data should be transmitted and stored securely, following all required security compliance.
+
+4. Reliability:
+   - Test Case 11:
+     - Action: User interacts with credit services on multiple occasions over the extended period.
+     - Expected Output: The system should always give consistent results.
+
+5. Supportability:
+   - Test Case 12:
+     - Action: User needs help during usage.
+     - Expected Output: There should be enough help documents, FAQ, and support assistance available.
+
+6. Maintainability:
+   - Test Case 13:
+     - Action: There are upgrades or changes in the system.
+     - Expected Output: The system should be easily maintainable without major service disruptions during updates.

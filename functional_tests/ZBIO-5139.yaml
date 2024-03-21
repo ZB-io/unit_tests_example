@@ -1,0 +1,106 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: CreditCard Application and Services API
+
+servers:
+  - url: 'http://localhost:3000'
+
+paths:
+
+  /apply-credit-card:
+    post:
+      summary: Apply for a credit card
+      requestBody:
+        description: Application details
+        required: true
+        content: 
+          application/json:
+            schema:
+              type: object
+              properties:
+                identification:
+                  type: string
+                income_details:
+                  type: string
+                contact_information:
+                  type: string
+      responses:
+        '200':
+          description: Application submitted successfully
+        '400':
+          description: Invalid or incomplete data supplied
+
+  /review-history:
+    put:
+      summary: Review customer's history to evaluate incurred fees
+      responses:
+        '200':
+          description: Review done
+
+  /waive-off-charges:
+    put:
+      summary: Waive off charges based on customer's history
+      responses:
+        '200':
+          description: Balance updated successfully
+
+  /redeem-points:
+    post:
+      summary: Redeem accumulated reward points
+      requestBody:
+        description: Redeem accumulated reward points
+        required: true
+        content: 
+          application/json:
+            schema:
+              type: object
+              properties:
+                accumulated_reward_points:
+                  type: number
+      responses:
+        '200':
+          description: Points redeemed successfully
+
+  /credit-limit-extension:
+    put:
+      summary: Extend the credit limit for users with good credit history
+      responses:
+        '200':
+          description: Credit limit updated successfully
+
+  /reduce-credit-limit:
+    put:
+      summary: Reduce the credit limit based on the user's financial situation or risk profile
+      requestBody:
+        description: Financial situation or risk profile details
+        required: true
+        content: 
+          application/json:
+            schema:
+              type: object
+              properties:
+                financial_situation:
+                  type: string
+                risk_profile:
+                  type: string
+      responses:
+        '200':
+          description: Credit limit updated successfully
+
+  /balance-transfer:
+    post:
+      summary: Transfer balance based on promotional offer
+      requestBody:
+        description: Promotional offer details
+        required: true
+        content: 
+          application/json:
+            schema:
+              type: object
+              properties:
+                promotional_offer:
+                  type: string
+      responses:
+        '200':
+          description: Balance transfer successful
