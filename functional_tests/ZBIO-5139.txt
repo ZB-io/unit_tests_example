@@ -1,0 +1,64 @@
+Functional Test Cases:
+
+1. Credit Card Application:
+   - Test Case 1: Customer applies for the credit card online
+     - Input: Valid customer information to fill application form
+     - Expected Output: Application submitted successfully and confirmation notification received
+   - Test Case 2: Customer applies through a bank branch
+     - Input: Bank branch applies with the customer's data on their behalf
+     - Expected Output: Application submitted successfully and informed to customer
+
+2. Waiving off charges:
+   - Test Case 1: Customer encounters an unexpected fee
+     - Input: Customer reports an unexpected fee
+     - Expected Output: A fee complaint report is lodged
+   - Test Case 2: Bank processes waiver for the unexpected fee
+     - Input: Fee complaint report from the customer
+     - Expected Output: Charges are waived off and the customer is informed
+
+3. Redeeming points:
+   - Test Case 1: Customer accumulates reward points
+     - Input: Customer makes transactions using credit card 
+     - Expected Output: Reward points for transactions are added to customer's account
+   - Test Case 2: Customer redeems reward points
+     - Input: Customer chooses to redeem reward points for a reward
+     - Expected Output: Desired reward is given to customer and the respective points are subtracted from the account
+
+4. Credit Limit Adjustment:
+   - Test Case 1: Bank increases the credit limit based on creditworthiness
+     - Input: Creditworthiness analysis of a customer
+     - Expected Output: Credit limit is increased and the customer is informed
+   - Test Case 2: Bank reduces the credit limit due to changes in the financial situation
+     - Input: Financial risk analysis of a customer
+     - Expected Output: Credit limit is reduced and the customer is informed
+
+5. Promotional Balance Transfers
+   - Test Case 1: Customer gets a balance transfer offer
+     - Input: Bank decision to offer promotional balance transfer
+     - Expected Output: The customer is informed about the promotional offer
+   - Test Case 2: Customer decides to opt for the promotional balance transfer offer
+     - Input: Customer's decision to transfer high-interest balance
+     - Expected Output: Balance transferred successfully and updating in customer account
+
+Non-functional Test Cases:
+
+1. Usability:
+   - Customers are able to easily navigate and use all the provided services
+
+2. Performance:
+   - Test the speed and response time of services
+
+3. Security:
+   - Customer information provided during the application process, transactions, and other operations is securely handled and stored
+
+4. Compatibility:
+   - Services and operations are compatible and easily accessible across different platforms, browsers, and devices
+
+5. Scalability:
+   - System should handle the increasing load when multiple users access services simultaneously 
+
+6. Accessibility:
+   - Services are accessible 24/7 
+
+7. Fault Tolerance:
+   - In case of any error or issue, the system should generate a relevant error message and recover without disturbing the user's workflow

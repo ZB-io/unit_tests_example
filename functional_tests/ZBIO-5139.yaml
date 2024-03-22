@@ -1,0 +1,152 @@
+openapi: 3.0.0
+info:
+  title: API for Banking Services
+  description: This is the API that provides different banking service scenarios.
+  version: 1.0.0
+servers:
+  - url: http://api.example.com/{path}
+    variables:
+      path:
+        default: v1
+paths:
+  /credit-card-application/submit-online:
+    post:
+      summary: Submitting online credit card application
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerApplication'
+      responses:
+        '201':
+          description: Application submitted successfully, confirmation notification sent
+  /credit-card-application/submit-branch:
+    post:
+      summary: Submitting branch credit card application
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerApplication'
+      responses:
+        '201':
+          description: Application submitted successfully, customer informed
+  /charges-complaint/file-complaint:
+    post:
+      summary: Filing a charges complaint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComplaintDetails'
+      responses:
+        '201':
+          description: Complaint lodged successfully
+  /charges-complaint/process-waiver:
+    put:
+      summary: Processing waiver
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComplaintReferenceID'
+      responses:
+        '200':
+          description: Charges waived off, customer informed
+  /reward-points/add-points:
+    post:
+      summary: Adding reward points
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionData'
+      responses:
+        '201':
+          description: Rewards points added successfully
+  /reward-points/redeem-points:
+    put:
+      summary: Redeeming reward points
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RewardSelectionData'
+      responses:
+        '200':
+          description: Rewards redeemed successfully, points updated
+  /credit-limit/increase-limit:
+    put:
+      summary: Increasing credit limit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerID'
+      responses:
+        '200':
+          description: Credit limit increased successfully, customer informed
+  /credit-limit/decrease-limit:
+    put:
+      summary: Decreasing credit limit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerID'
+      responses:
+        '200':
+          description: Credit limit reduced successfully, customer informed
+  /promo-balance-transfer/send-offer:
+    post:
+      summary: Sending promotional balance transfer offer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerID'
+      responses:
+        '201':
+          description: Promotional offer sent to customer
+  /promo-balance-transfer/process-transfer:
+    put:
+      summary: Processing promotional balance transfer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransferData'
+      responses:
+        '200':
+          description: Balance transferred successfully, account updated
+          
+components:
+  schemas:
+    CustomerApplication:
+      type: object
+      properties:
+        //required customer data details
+    ComplaintDetails:
+      type: object
+      properties:
+        //required complaint details
+    ComplaintReferenceID:
+      type: object
+      properties:
+        //required complaint reference ID details
+    TransactionData:
+      type: object
+      properties:
+        //required transaction data details
+    RewardSelectionData:
+      type: object
+      properties:
+        //required reward selection data details
+    CustomerID:
+      type: object
+      properties:
+        //required customer ID details
+    TransferData:
+      type: object
+      properties:
+        //required transfer details
