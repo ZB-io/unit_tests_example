@@ -1,0 +1,158 @@
+openapi: 3.0.0
+info:
+  description: This is the API that provides different banking service scenarios.
+  title: API for Banking Services
+  version: 1.0.0
+servers:
+- url: "http://api.example.com/{path}"
+  variables:
+    path:
+      default: v1
+paths:
+  /credit-card-application/submit-online:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerApplication'
+      responses:
+        "201":
+          description: "Application submitted successfully, confirmation notification\
+            \ sent"
+      summary: Submitting online credit card application
+      x-content-type: application/json
+      x-accepts: application/json
+  /credit-card-application/submit-branch:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerApplication'
+      responses:
+        "201":
+          description: "Application submitted successfully, customer informed"
+      summary: Submitting branch credit card application
+      x-content-type: application/json
+      x-accepts: application/json
+  /charges-complaint/file-complaint:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComplaintDetails'
+      responses:
+        "201":
+          description: Complaint lodged successfully
+      summary: Filing a charges complaint
+      x-content-type: application/json
+      x-accepts: application/json
+  /charges-complaint/process-waiver:
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComplaintReferenceID'
+      responses:
+        "200":
+          description: "Charges waived off, customer informed"
+      summary: Processing waiver
+      x-content-type: application/json
+      x-accepts: application/json
+  /reward-points/add-points:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionData'
+      responses:
+        "201":
+          description: Rewards points added successfully
+      summary: Adding reward points
+      x-content-type: application/json
+      x-accepts: application/json
+  /reward-points/redeem-points:
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RewardSelectionData'
+      responses:
+        "200":
+          description: "Rewards redeemed successfully, points updated"
+      summary: Redeeming reward points
+      x-content-type: application/json
+      x-accepts: application/json
+  /credit-limit/increase-limit:
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerID'
+      responses:
+        "200":
+          description: "Credit limit increased successfully, customer informed"
+      summary: Increasing credit limit
+      x-content-type: application/json
+      x-accepts: application/json
+  /credit-limit/decrease-limit:
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerID'
+      responses:
+        "200":
+          description: "Credit limit reduced successfully, customer informed"
+      summary: Decreasing credit limit
+      x-content-type: application/json
+      x-accepts: application/json
+  /promo-balance-transfer/send-offer:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerID'
+      responses:
+        "201":
+          description: Promotional offer sent to customer
+      summary: Sending promotional balance transfer offer
+      x-content-type: application/json
+      x-accepts: application/json
+  /promo-balance-transfer/process-transfer:
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransferData'
+      responses:
+        "200":
+          description: "Balance transferred successfully, account updated"
+      summary: Processing promotional balance transfer
+      x-content-type: application/json
+      x-accepts: application/json
+components:
+  schemas:
+    CustomerApplication:
+      type: object
+    ComplaintDetails:
+      type: object
+    ComplaintReferenceID:
+      type: object
+    TransactionData:
+      type: object
+    RewardSelectionData:
+      type: object
+    CustomerID:
+      type: object
+    TransferData:
+      type: object
