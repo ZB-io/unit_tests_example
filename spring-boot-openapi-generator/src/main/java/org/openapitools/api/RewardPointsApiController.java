@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-27T14:42:07.300067+05:30[Asia/Kolkata]", comments = "Generator version: 7.4.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-27T14:56:01.389439+05:30[Asia/Kolkata]", comments = "Generator version: 7.4.0")
 @Controller
 @RequestMapping("${openapi.aPIForBankingServices.base-path:/v1}")
 public class RewardPointsApiController implements RewardPointsApi {
